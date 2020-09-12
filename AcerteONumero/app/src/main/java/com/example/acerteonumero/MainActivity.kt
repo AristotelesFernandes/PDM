@@ -24,9 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvResultado: TextView
     private lateinit var tvValorGerado: TextView
 
-    private lateinit var barraDeAcao: android.app.ActionBar
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -44,9 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         this.btInicio.setOnClickListener(OnClickBotaoIniciar())
         this.btPalpite.setOnClickListener(OnClickBotaoPalpite())
-
-        this.barraDeAcao = actionBar!!
-        this.barraDeAcao.setBackgroundDrawable(ColorDrawable(1))
 
     }
 
@@ -84,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         override fun onClick(v: View?) {
             var listaDivisores = listOf<Int>()
             var qtdeDivisores = 0
+            var aux = ""
 
             this@MainActivity.valorGerado = gerarValorAleatorio()
 
@@ -95,13 +90,31 @@ class MainActivity : AppCompatActivity() {
 
             this@MainActivity.llInicio.visibility = View.INVISIBLE
 
-            this@MainActivity.tvDica1.text = "Os divisores do número entre 1 e 10 são " + listaDivisores.joinToString(", ") + "!"
-            if (isNumeroPar(valorGerado))
-                this@MainActivity.tvDica2.text = " O número é par!"
-            else
-                this@MainActivity.tvDica2.text = " O número é impar!"
-            this@MainActivity.tvDica3.text = "O número possui " + qtdeDivisores.toString() + " divisores!"
+            aux = "Os divisores do número entre 1 e 10"
+            if (listaDivisores.size > 1){
+                aux += " são " + listaDivisores.joinToString(", ") + "!"
+            } else {
+                aux += " é " + listaDivisores.joinToString(", ") + "!"
+            }
+            this@MainActivity.tvDica1.text = aux
+
+            if (isNumeroPar(valorGerado)) {
+                aux = "O número é par!"
+            } else {
+                aux = "O número é impar!"
+            }
+            this@MainActivity.tvDica2.text = aux
+
+            aux = "O número possui " + qtdeDivisores.toString()
+            if (qtdeDivisores > 1) {
+                aux += " divisores!"
+            } else {
+                aux += " divisor!"
+            }
+            this@MainActivity.tvDica3.text = aux
+
             this@MainActivity.etPalpite.text.clear()
+            this@MainActivity.etPalpite.requestFocus()
             this@MainActivity.llPalpite.visibility = View.VISIBLE
 
         }
