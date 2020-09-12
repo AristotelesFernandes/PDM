@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llInicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:text=""
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvValorGerado"
+            android:text="Toque no botão para iniciar"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INÍCIO"
+            style="@style/Widget.AppCompat.Button.Colored"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPalpite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDica1"
+            android:text="DICA 1"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/tvDica2"
+            android:text="DICA 2"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/tvDica3"
+            android:text="DICA 3"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etPalpite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btPalpite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arriscar palpite"
+            style="@style/Widget.AppCompat.Button.Colored"
+
+            />
+    </LinearLayout>
+
+</FrameLayout>
