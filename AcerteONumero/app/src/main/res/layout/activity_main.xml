@@ -40,6 +40,15 @@
             android:text="COMEÇAR!"
             style="@style/Widget.AppCompat.Button.Colored"
             />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desenvolvido por Aristóteles Fernandes"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:gravity="center"
+            />
     </LinearLayout>
 
     <LinearLayout
@@ -90,6 +99,15 @@
             android:text="Arriscar palpite"
             style="@style/Widget.AppCompat.Button.Colored"
 
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Desenvolvido por Aristóteles Fernandes"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:gravity="center"
             />
     </LinearLayout>
 
