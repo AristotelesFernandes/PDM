@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ResultadoActivity">
+
+
+    <TextView
+        android:id="@+id/tvResultado1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULTADO"
+        android:textSize="28sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvResultado2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESULTADO"
+        android:textSize="24sp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btJogarNovamente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JOGAR NOVAMENTE"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por Aristóteles Fernandes"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        />
+
+</LinearLayout>

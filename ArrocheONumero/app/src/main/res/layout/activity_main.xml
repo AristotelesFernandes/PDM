@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INFORME UM VALOR ENTRE"
+        android:textSize="26sp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvIntervalo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 E 100"
+        android:textSize="24sp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe um valor"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/btArrochar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ARROCHAR"
+        android:textSize="24sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por Aristóteles Fernandes"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:gravity="center"
+        />
+
+</LinearLayout>
