@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvMainVerde: TextView
     private lateinit var tvMainAzul: TextView
 
-    private var texto: String? = ""
-
     private lateinit var telaReceiver: TelaReceiver
     private lateinit var telaIntentFilter: IntentFilter
 
@@ -33,12 +31,10 @@ class MainActivity : AppCompatActivity() {
         this.tvMainVerde = findViewById(R.id.tvMainVerde)
         this.tvMainAzul = findViewById(R.id.tvMainAzul)
 
-        this.texto = intent.dataString
-
-        if (this.texto != null) {
-            this.tvMainVermelho.text = this.texto
-            this.tvMainVerde.text = this.texto
-            this.tvMainAzul.text = this.texto
+        if (intent.hasExtra(Intent.EXTRA_TEXT)) {
+            this.tvMainVermelho.text = intent.getStringExtra(Intent.EXTRA_TEXT)
+            this.tvMainVerde.text = intent.getStringExtra(Intent.EXTRA_TEXT)
+            this.tvMainAzul.text = intent.getStringExtra(Intent.EXTRA_TEXT)
         } else {
             this.tvMainVermelho.text = "VERMELHO"
             this.tvMainVerde.text = "VERDE"
