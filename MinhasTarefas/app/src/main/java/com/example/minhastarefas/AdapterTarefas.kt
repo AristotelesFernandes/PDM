@@ -11,7 +11,6 @@ import android.widget.TextView
 class AdapterTarefas (private var tarefas: ArrayList<Tarefa>, var context: Context) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val cor = this.tarefas.get(position)
         val linha: View
         if (convertView == null) {
             val inflater =
