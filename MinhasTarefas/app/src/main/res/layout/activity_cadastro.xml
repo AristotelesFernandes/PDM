@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CadastroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Tarefa"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:text="Descrição: "/>
+
+
+       <EditText
+           android:id="@+id/etCadastroDescricao"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Informe a descrição da tarefa."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Prioridade: " />
+
+        <SeekBar
+            android:id="@+id/sbCadastroPrioridade"
+            android:min="1"
+            android:max="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvCadastroPrioridade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:text="Status:"/>
+
+        <RadioGroup
+            android:id="@+id/rgCadastroStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rbCadastroStatus0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aberto"
+                android:checked="true"
+                android:enabled="false"
+                />
+
+            <RadioButton
+                android:id="@+id/rbCadastroStatus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Executando"
+                android:enabled="false"
+                />
+
+            <RadioButton
+                android:id="@+id/rbCadastroStatus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Concluído"
+                android:enabled="false"
+                />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btCadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar"/>
+
+        <Button
+            android:id="@+id/btCadastroCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desenvolvido por Aristóteles Fernandes"
+        android:textStyle="italic"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
